@@ -15,7 +15,6 @@ This command-line project reads a text file, analyzes the frequency of each word
 - [Implementation Details](#implementation-details)  
 - [Example](#example)  
 - [Future Enhancements](#future-enhancements)  
-- [License](#license)  
 
 ---
 
@@ -41,3 +40,90 @@ Verify your setup:
 ```bash
 elixir -v
 erl -version
+```
+## Installation 
+
+- git clone https://github.com/josephmangara/word-frequency-analyzer.git
+- cd word-frequency-analyzer
+
+## Usage 
+
+iex -S mix
+WordFrequency.analyze("sample.txt")
+
+Running as a script 
+- elixir lib/word_frequency.exs sample.txt
+
+Example output 
+- [
+  {"elixir", 5},
+  {"language", 3},
+  {"programming", 2},
+  {"is", 2},
+  {"fun", 1}
+]
+
+## Project structure
+
+word_frequency/
+├── lib/
+│   └── word_frequency.ex   # Core logic module
+├── test/                   # Unit tests (optional)
+├── sample.txt              # Example input file
+├── mix.exs                 # Mix project file
+└── README.md
+
+## Implementation Details
+
+The project is organized around a single module: WordFrequency.
+
+Module Functions
+
+analyze(file_path)
+Reads the file, processes text, and returns a sorted word frequency list.
+
+clean_text(text)
+Converts text to lowercase and removes all non-alphabetic characters.
+
+split_words(text)
+Splits text into a list of words.
+
+count_words(words)
+Counts occurrences of each word using Enum.reduce and maps.
+
+sort_by_frequency(word_map)
+Sorts the word frequency map in descending order.
+
+## Example
+
+Given a file sample.txt:
+
+kotlin
+
+Elixir is a functional language.
+Elixir makes concurrent programming easy.
+Elixir is fun!
+
+elixir
+
+WordFrequency.analyze("sample.txt")
+
+Output:
+[
+  {"elixir", 3},
+  {"is", 2},
+  {"functional", 1},
+  {"language", 1},
+  {"makes", 1},
+  {"concurrent", 1},
+  {"programming", 1},
+  {"easy", 1},
+  {"fun", 1}
+]
+
+## Future Enhancements
+- CLI interface with OptionParser
+- Export results to CSV or JSON
+- Handle very large files using File.stream!/1
+- Real-time analysis of streamed input or user input
+- Ignore common stopwords for cleaner frequency counts
