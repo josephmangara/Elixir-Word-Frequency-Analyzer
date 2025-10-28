@@ -1,0 +1,4 @@
+elixir: 2
+is: 2
+awesome: 1
+fun: 1

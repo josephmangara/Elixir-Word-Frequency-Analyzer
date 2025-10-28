@@ -26,4 +26,23 @@ defmodule WordFrequency do
     word_map
     |> Enum.sort_by(fn {_word, count} -> -count end)
   end
+
+  def top_n(results, n) do
+    Enum.take(results, n)
+  end
+
+  def save_results(results, output_path) do
+    content =
+      results
+      |> Enum.map(fn {w, c} -> "#{w}: #{c}" end)
+      |> Enum.join("\n")
+
+    File.write!(output_path, content)
+  end
 end
+
+results = WordFrequency.analyze("lib/sample.txt")
+IO.inspect WordFrequency.top_n(results, 5)
+WordFrequency.save_results(results, "output.txt")
+
+
