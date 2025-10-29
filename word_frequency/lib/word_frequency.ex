@@ -35,6 +35,10 @@ defmodule WordFrequency do
     Enum.take(results, n)
   end
 
+  def total_unique(results) do
+    length(results)
+  end
+
   def save_results(results, output_path) do
     content =
       results
@@ -42,11 +46,10 @@ defmodule WordFrequency do
       |> Enum.join("\n")
 
     File.write!(output_path, content)
-  end
+  end 
 end
 
 results = WordFrequency.analyze("lib/sample.txt")
 IO.inspect WordFrequency.top_n(results, 5)
+IO.puts("Total unique words: #{WordFrequency.total_unique(results)}")
 WordFrequency.save_results(results, "output.txt")
-
-
