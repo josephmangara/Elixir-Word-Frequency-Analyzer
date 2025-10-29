@@ -11,10 +11,14 @@ defmodule WordFrequency do
   defp clean_text(text) do
     text
     |> String.downcase()
-    |> String.replace(~r/[^a-z\s]/, "")
+    |> String.replace(~r/[^\p{L}\s]/u, "")
   end
 
-  defp split_words(text), do: String.split(text)
+  defp split_words(text) do 
+    text
+    |> String.replace(~r/\s+/, " ")
+    |> String.split(" ", trim: true)
+  end
 
   defp count_words(words) do
     Enum.reduce(words, %{}, fn word, acc ->
