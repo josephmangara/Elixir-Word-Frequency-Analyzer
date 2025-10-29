@@ -1,1 +1,2 @@
-Elixir is awesome. Elixir is fun!
+Elixir is awesome. Elixir runs on the Erlang VM, known for creating low-latency, distributed, and fault-tolerant systems. These capabilities and Elixir tooling allow developers to be productive in several domains, such as web development, embedded software, machine learning, data pipelines, and multimedia processing, across a wide range of industries.
+
