@@ -47,12 +47,15 @@ erl -version
 - cd word-frequency-analyzer
 
 ## Usage 
+In the terminal, open the app folder by running: 
+- cd word_frequency
 
-iex -S mix
-WordFrequency.analyze("sample.txt")
+Running as a script on the CLI:
+- elixir lib/word_frequency.ex 
 
-Running as a script 
-- elixir lib/word_frequency.exs sample.txt
+Alternatively, you can explore Elixir by running: 
+- iex -S mix
+- WordFrequency.analyze("lib/sample.txt")
 
 Example output 
 - [
