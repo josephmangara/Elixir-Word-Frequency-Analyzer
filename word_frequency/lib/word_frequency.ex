@@ -49,7 +49,7 @@ defmodule WordFrequency do
   end 
 end
 
-results = WordFrequency.analyze("sample.txt")
+results = WordFrequency.analyze("lib/sample.txt")
 IO.inspect WordFrequency.top_n(results, 5)
 IO.puts("Total unique words: #{WordFrequency.total_unique(results)}")
 WordFrequency.save_results(results, "output.txt")
