@@ -1,2 +1,13 @@
-Elixir is awesome. Elixir runs on the Erlang VM, known for creating low-latency, distributed, and fault-tolerant systems. These capabilities and Elixir tooling allow developers to be productive in several domains, such as web development, embedded software, machine learning, data pipelines, and multimedia processing, across a wide range of industries.
+How to create a Word Frequency Analyzer Using Elixir
+- I chose Elixir because it’s a niche language. 
+- Learning it will enhance my backend development skills and allow exploration of the concept of building an easily scalable system. 
+- The project will involve creating a program that can read a text file and count how many times each word appears. 
+- It will also output a file that contains the breakdown. 
+- This tool can be used by learners of a new language to identify words that occur most frequently in various texts/conversations, and study them to enhance their vocabulary. 
+Summary of Elixir
+Elixir is a back-end programming language that is used to build scalable and fault-tolerant systems. It runs on the Erlang virtual machine (BEAM).  Its frontend framework is Phoenix. Phoenix has useful features such as LiveView, which allows for real-time interactive interfaces with minimal JavaScript. 
+Key examples of platforms that use Elixir include Discord, Pinterest, and Heroku
 
+
+日本語（にほんご）の例文：
+今日はとてもいい天気ですね。朝から太陽が出ていて、空は青く、風も気持ちがいいです。午後には友だちと公園でピクニックをする予定です。
