@@ -1,11 +1,18 @@
 defmodule WordFrequency do
+  
   def analyze(file_path) do
-    file_path
-    |> File.read!()
-    |> clean_text()
-    |> split_words()
-    |> count_words()
-    |> sort_by_frequency()
+    case File.read(file_path) do
+      {:ok, content} ->
+        content
+        |> clean_text()
+        |> split_words()
+        |> count_words()
+        |> sort_by_frequency()
+
+      {:error, reason} ->
+        IO.puts("Error reading file: #{reason}")
+        []
+    end
   end
 
   defp clean_text(text) do
