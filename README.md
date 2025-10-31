@@ -66,6 +66,9 @@ Example output
   {"fun", 1}
 ]
 
+You can also try out the test cases by running:
+- mix test
+
 ## Project structure
 
 word_frequency/
