@@ -69,6 +69,19 @@ Example output
 You can also try out the test cases by running:
 - mix test
 
+## How to run the web app
+We are almost there! The following steps are missing:
+
+    $ cd word_frequency_web
+
+Start your Phoenix app with:
+
+    $ mix phx.server
+
+You can also run your app inside IEx (Interactive Elixir) as:
+
+    $ iex -S mix phx.server
+
 ## Project structure
 
 word_frequency/
