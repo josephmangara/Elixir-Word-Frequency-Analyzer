@@ -101,8 +101,6 @@ Sorts the word frequency map in descending order.
 
 Given a file sample.txt:
 
-kotlin
-
 Elixir is a functional language.
 Elixir makes concurrent programming easy.
 Elixir is fun!
