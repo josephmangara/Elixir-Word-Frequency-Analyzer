@@ -27,8 +27,6 @@ defmodule WordFrequency do
     |> String.split(" ", trim: true)
   end
 
-  @stopwords ~w(the a an and of in to is it for on by with)
-
   defp count_words(words) do
     Enum.reduce(words, %{}, fn word, acc ->
       Map.update(acc, word, 1, &(&1 + 1))
