@@ -1,11 +1,5 @@
-a: 7
 that: 5
-of: 5
 elixir: 5
-and: 5
-to: 4
-the: 4
-is: 3
 language: 3
 it: 3
 will: 3
@@ -36,12 +30,9 @@ vocabulary: 1
 using: 1
 be: 1
 faulttolerant: 1
-for: 1
 今日はとてもいい天気ですね朝から太陽が出ていて空は青く風も気持ちがいいです午後には友だちと公園でピクニックをする予定です: 1
 this: 1
-with: 1
 various: 1
-an: 1
 system: 1
 output: 1
 include: 1
@@ -57,7 +48,6 @@ identify: 1
 日本語にほんごの例文: 1
 their: 1
 virtual: 1
-by: 1
 allows: 1
 chose: 1
 machine: 1
@@ -72,7 +62,6 @@ javascript: 1
 systems: 1
 niche: 1
 contains: 1
-on: 1
 breakdown: 1
 allow: 1
 them: 1
@@ -84,7 +73,6 @@ also: 1
 useful: 1
 pinterest: 1
 involve: 1
-in: 1
 learners: 1
 heroku: 1
 liveview: 1
