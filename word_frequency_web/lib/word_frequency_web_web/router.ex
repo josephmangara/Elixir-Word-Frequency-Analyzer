@@ -19,6 +19,7 @@ defmodule WordFrequencyWebWeb.Router do
 
     get "/", PageController, :home
     post "/analyze", PageController, :analyze
+    get "/download", PageController, :download
   end
 
   # Other scopes may use custom stacks.

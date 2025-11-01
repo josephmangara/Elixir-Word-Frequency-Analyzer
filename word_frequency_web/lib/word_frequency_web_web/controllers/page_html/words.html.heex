@@ -1,9 +1,44 @@
+<div class="max-w-3xl mx-auto mt-10 space-y-10">
 
-<h2>Top 50 Most Frequent Words</h2>
-<ol>
-<%= for {word, count} <- @result do %>
-  <li><%= word %> — <%= count %></li>
-<% end %>
-</ol>
+  <h2 class="text-2xl font-bold">Top 50 Most Frequent Words</h2>
 
-<a href="/download?format=csv">Download full results (CSV)</a>
+  <ol class="list-decimal pl-6 space-y-1 text-lg">
+  <%= for {word, count} <- @result do %>
+    <li class="flex justify-between border-b pb-1">
+      <span><%= word %></span>
+      <span class="font-semibold"><%= count %></span>
+    </li>
+  <% end %>
+  </ol>
+
+  <a href={"/download?format=csv&text=#{URI.encode(@original_text)}"}
+     class="btn btn-outline btn-primary p-4">
+     Download full results (CSV)
+  </a>
+
+  <h2 class="text-2xl font-bold mt-10">Top 10 Chart</h2>
+  <canvas id="freqChart" height="120"></canvas>
+
+</div>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const ctx = document.getElementById("freqChart");
+  new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels: <%= Jason.encode!(@chart_labels) %>,
+      datasets: [{
+        label: "Frequency",
+        data: <%= Jason.encode!(@chart_values) %>,
+        borderWidth: 2
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { display: false } },
+      scales: { y: { beginAtZero: true } }
+    }
+  });
+</script>
