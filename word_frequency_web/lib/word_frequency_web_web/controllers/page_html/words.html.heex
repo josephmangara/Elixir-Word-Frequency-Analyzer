@@ -1,8 +1,9 @@
-<h2>Word Frequency Results</h2>
-<ul>
+
+<h2>Top 50 Most Frequent Words</h2>
+<ol>
 <%= for {word, count} <- @result do %>
   <li><%= word %> — <%= count %></li>
 <% end %>
-</ul>
+</ol>
 
-
+<a href="/download?format=csv">Download full results (CSV)</a>

@@ -9,8 +9,9 @@ defmodule WordFrequencyWebWeb.PageController do
   # Analyze endpoint 
   def analyze(conn, %{"text" => text}) do
     result = WordFrequency.analyze_text(text)
+    top_50 = Enum.take(result, 50)
 
-    render(conn, :words, result: result)
+    render(conn, :words, result: top_50)
   end
 end
 
