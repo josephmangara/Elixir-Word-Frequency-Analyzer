@@ -196,6 +196,14 @@
             </a>
           </div>
           <p>Confirming the application's functionality</p>
+
+          <h1>Word Frequency Analyzer</h1>
+          <form action="/analyze" method="post">
+            <input type="hidden" name="_csrf_token" value={Plug.CSRFProtection.get_csrf_token()} />
+            <textarea class="p-2" name="text" rows="5" cols="60" placeholder="Enter text here..."></textarea>
+            <br>
+            <button type="submit">Analyze</button>
+          </form>
         </div>
       </div>
     </div>

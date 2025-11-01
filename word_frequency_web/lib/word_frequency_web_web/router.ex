@@ -18,6 +18,7 @@ defmodule WordFrequencyWebWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    post "/analyze", PageController, :analyze
   end
 
   # Other scopes may use custom stacks.

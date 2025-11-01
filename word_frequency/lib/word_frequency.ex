@@ -1,5 +1,14 @@
 defmodule WordFrequency do
   
+  # Public function: analyze raw text
+  def analyze_text(text) do
+    text
+    |> clean_text()
+    |> split_words()
+    |> count_words()
+    |> sort_by_frequency()
+  end
+  
   def analyze(file_path) do
     case File.read(file_path) do
       {:ok, content} ->
