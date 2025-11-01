@@ -14,8 +14,8 @@ defmodule WordFrequencyWebWeb.PageController do
 
     render(conn, :words, 
       result: top_50,
-      chart_labels: Enum.map(top_10_for_chart, &elem(&1, 0)),
-      chart_values: Enum.map(top_10_for_chart, &elem(&1, 1)),
+      chart_labels: Jason.encode!(Enum.map(top_10_for_chart, &elem(&1, 0))),
+      chart_values: Jason.encode!(Enum.map(top_10_for_chart, &elem(&1, 1))),
       original_text: text
       )
   end
