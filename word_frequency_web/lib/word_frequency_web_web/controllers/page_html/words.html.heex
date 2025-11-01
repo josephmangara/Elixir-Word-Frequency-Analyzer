@@ -1,0 +1,8 @@
+<h2>Word Frequency Results</h2>
+<ul>
+<%= for {word, count} <- @result do %>
+  <li><%= word %> — <%= count %></li>
+<% end %>
+</ul>
+
+
