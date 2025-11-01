@@ -82,6 +82,9 @@ You can also run your app inside IEx (Interactive Elixir) as:
 
     $ iex -S mix phx.server
 
+Run this in case you get stuck 
+    $ mix deps.get
+
 ## Project structure
 
 word_frequency/
