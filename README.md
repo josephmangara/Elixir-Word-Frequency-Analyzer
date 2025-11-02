@@ -11,6 +11,7 @@ This command-line project reads a text file, analyzes the frequency of each word
 - [Prerequisites](#prerequisites)  
 - [Installation](#installation)  
 - [Usage](#usage)  
+- [How to run the web app](#how-to-run-the-web-app)
 - [Project Structure](#project-structure)  
 - [Implementation Details](#implementation-details)  
 - [Example](#example)  
@@ -65,12 +66,15 @@ erl -version
 ```
 ## Installation 
 Run the following commands to get started with the project:
-- $ git clone https://github.com/josephmangara/word-frequency-analyzer.git
-- $ cd word-frequency-analyzer
+``` bash
+git clone https://github.com/josephmangara/Elixir-Word-Frequency-Analyzer.git
+cd word-frequency-analyzer
+```
 
 ## Usage 
 In the terminal, open the app folder by running: 
-- cd word_frequency
+```bash cd word_frequency
+```
 
 Running as a script on the CLI:
 ``` bash 
