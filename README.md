@@ -24,7 +24,7 @@ This command-line project reads a text file, analyzes the frequency of each word
 - Normalize text (lowercase, remove punctuation)  
 - Count occurrences of each word  
 - Sort words by frequency  
-- Optional: Export results to a file  
+- Export results to a file  
 - Fully written in idiomatic Elixir
 
 ---
@@ -35,6 +35,28 @@ This command-line project reads a text file, analyzes the frequency of each word
 - Erlang/OTP >= 26  
 - Terminal/command-line experience  
 
+- Install elixir and erlang in Ubuntu Linux by running the following in terminal:
+``` bash
+sudo add-apt-repository ppa:rabbitmq/rabbitmq-erlang
+sudo apt update
+sudo apt install git elixir erlang
+```
+
+- For macOS, you can use:
+``` bash
+brew install elixir
+or 
+sudo port install elixir
+```
+
+- Windows:
+- Download and run the Erlang installer from this link. 
+- https://www.erlang.org/downloads.html
+- Download and run the Elixir installer compatible with your Erlang/OTP version:
+- [Elixir 1.19.2 on Erlang 26](https://github.com/elixir-lang/elixir/releases/download/v1.19.2/elixir-otp-26.exe)
+
+[Here's a link on how to install Elixir in other operating systems. (Official elixir documentation)](https://elixir-lang.org/install.html)
+
 Verify your setup:
 
 ```bash
@@ -42,39 +64,44 @@ elixir -v
 erl -version
 ```
 ## Installation 
-
-- git clone https://github.com/josephmangara/word-frequency-analyzer.git
-- cd word-frequency-analyzer
+Run the following commands to get started with the project:
+- $ git clone https://github.com/josephmangara/word-frequency-analyzer.git
+- $ cd word-frequency-analyzer
 
 ## Usage 
 In the terminal, open the app folder by running: 
 - cd word_frequency
 
 Running as a script on the CLI:
-- elixir lib/word_frequency.ex 
+``` bash 
+elixir lib/word_frequency.ex 
+```
 
-Alternatively, you can explore Elixir by running: 
-- iex -S mix
-- WordFrequency.analyze("lib/sample.txt")
-
+Alternatively, you can explore Elixir's interactive shell by running: 
+``` bash
+iex -S mix
+WordFrequency.analyze("lib/sample.txt")
 Example output 
-- [
+ [
   {"elixir", 5},
   {"language", 3},
   {"programming", 2},
   {"is", 2},
   {"fun", 1}
 ]
+```
 
 You can also try out the test cases by running:
-- mix test
+``` bash 
+mix test
+``` 
 
 ## How to run the web app
-We are almost there! The following steps are missing:
+Follow these steps:
 
     $ cd word_frequency_web
 
-Start your Phoenix app with:
+Start the Phoenix app with:
 
     $ mix phx.server
 
@@ -86,7 +113,7 @@ Run this in case you get stuck
     $ mix deps.get
 
 ## Project structure
-
+``` bash
 word_frequency/
 ├── lib/
 │   └── word_frequency.ex   # Core logic module
@@ -94,6 +121,7 @@ word_frequency/
 ├── sample.txt              # Example input file
 ├── mix.exs                 # Mix project file
 └── README.md
+```
 
 ## Implementation Details
 
@@ -117,7 +145,7 @@ sort_by_frequency(word_map)
 Sorts the word frequency map in descending order.
 
 ## Example
-
+``` bash
 Given a file sample.txt:
 
 Elixir is a functional language.
@@ -140,10 +168,10 @@ Output:
   {"easy", 1},
   {"fun", 1}
 ]
+```
 
 ## Future Enhancements
 - CLI interface with OptionParser
-- Export results to CSV or JSON
 - Handle very large files using File.stream!/1
 - Real-time analysis of streamed input or user input
 - Ignore common stopwords for cleaner frequency counts
