@@ -148,11 +148,7 @@ Sorts the word frequency map in descending order.
 ``` bash
 Given a file sample.txt:
 
-Elixir is a functional language.
-Elixir makes concurrent programming easy.
-Elixir is fun!
-
-elixir
+"Elixir is a functional language. Elixir makes concurrent programming easy. Elixir is fun!"
 
 WordFrequency.analyze("sample.txt")
 
